@@ -8,7 +8,7 @@ import time
 import traceback
 
 DOMAIN_NAME = '1point3acres.com'
-PROJECT_ID = 197  # The project name represents each section of the forum
+PROJECT_ID = 82  # The project name represents each section of the forum
 
 create_project_dir(DOMAIN_NAME + '/' + str(PROJECT_ID))
 

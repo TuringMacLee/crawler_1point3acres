@@ -3,10 +3,10 @@ import MySQLdb
 
 def connect_to_db():
     conn = MySQLdb.connect(
-        host='localhost',
+        host='127.0.0.1',
         port=3306,
         user='root',
-        passwd='960423',
+        passwd='root',
         db='1point3acres',
         charset="utf8"
     )
@@ -15,7 +15,7 @@ def connect_to_db():
 
 def create_table(cursor, table_name):
     cursor.execute('create table if not exists ' + table_name + '''(
-    url nvarchar(128),post_name nvarchar(128),author_url nvarchar(128),author_name nvarchar(128),
+    url nvarchar(500),post_name text,author_url text,author_name nvarchar(128),
     reply int,pv int,date_time datetime,content text,PRIMARY KEY (url))''')
 
 
